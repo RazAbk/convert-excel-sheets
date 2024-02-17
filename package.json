@@ -1,7 +1,7 @@
 {
   "name": "convert-excel-sheets",
   "version": "0.0.0",
-  "homepage": "https://razabk.github.io/excels-converter/",
+  "homepage": ".",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
