@@ -1,13 +1,13 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["polyfills"],{
 
-/***/ 1:
+/***/ 4:
 /*!********************************!*\
   !*** multi ./src/polyfills.ts ***!
   \********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/razabekasis/Desktop/Projects/convert-excel-sheets/convert-excel-sheets/src/polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! /Users/razabekasis/Desktop/Projects/convert-excel-sheets/src/polyfills.ts */"hN/g");
 
 
 /***/ }),
@@ -2897,5 +2897,5 @@ Zone.__load_patch('PromiseRejectionEvent', (global, Zone) => {
 
 /***/ })
 
-},[[1,"runtime"]]]);
+},[[4,"runtime"]]]);
 //# sourceMappingURL=polyfills.js.map
