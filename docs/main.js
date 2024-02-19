@@ -137,7 +137,13 @@ class AppComponent {
                 [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ID]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns"].PRODUCT_NAME],
                 [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].DESCRIPTION]: "",
                 [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].QUANTITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns"].QUANTITY],
-                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].PRICE_BEFORE_TAX]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns"].PRIVE_INC_TAX],
+                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].PRICE_BEFORE_TAX]: `${(+originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns"].PRICE_INC_TAX] / 1.17 / +originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns"].QUANTITY]).toFixed(2)}`,
+            });
+            // משלוח
+            modifiedFinalObj.push({
+                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "2",
+                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ID]: "2BF-24MONITOR",
+                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].QUANTITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns"].QUANTITY],
             });
             // משלוח
             modifiedFinalObj.push({
@@ -152,8 +158,8 @@ class AppComponent {
                 [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TELEPHONE_NUM]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns"].COSTUMER_TELEPHONE],
                 [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].EMAIL]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns"].EMAIL],
                 [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ADDRESS1]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns"].ADDRESS],
-                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ADDRESS2]: "",
-                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ADDRESS3]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns"].TELEPHONE_SHIPPING],
+                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ADDRESS2]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns"].TEXT_SHIPMENT],
+                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ADDRESS3]: `${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns"].COSTUMER_TELEPHONE]}`.includes(`${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns"].TELEPHONE_SHIPPING]}`) ? "" : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns"].TELEPHONE_SHIPPING],
                 [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].CITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns"].CITY],
             });
             // טקסט להזמנה
@@ -168,7 +174,7 @@ class AppComponent {
         const ws = xlsx__WEBPACK_IMPORTED_MODULE_1__["utils"].json_to_sheet(rows);
         const wb = xlsx__WEBPACK_IMPORTED_MODULE_1__["utils"].book_new();
         xlsx__WEBPACK_IMPORTED_MODULE_1__["utils"].book_append_sheet(wb, ws, "Data");
-        xlsx__WEBPACK_IMPORTED_MODULE_1__["writeFile"](wb, "asdf.xlsx");
+        xlsx__WEBPACK_IMPORTED_MODULE_1__["writeFile"](wb, "2BF_ORDERS_EXPORT.xlsx");
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
@@ -238,7 +244,7 @@ var ImportColumns;
     ImportColumns["EMAIL"] = "\u05DE\u05D9\u05D9\u05DC";
     ImportColumns["PRODUCT_NAME"] = "\u05E9\u05DD \u05D4\u05DE\u05D5\u05E6\u05E8";
     ImportColumns["QUANTITY"] = "\u05DB\u05DE\u05D5\u05EA";
-    ImportColumns["PRIVE_INC_TAX"] = "\u05E1\u05D4\u05F4\u05DB \u05DB\u05D5\u05DC\u05DC \u05DE\u05E2\u05F4\u05DE";
+    ImportColumns["PRICE_INC_TAX"] = "\u05E1\u05D4\u05F4\u05DB \u05DB\u05D5\u05DC\u05DC \u05DE\u05E2\u05F4\u05DE";
     ImportColumns["CURRENCY"] = "\u05DE\u05D8\u05D1\u05E2";
     ImportColumns["SHIPMENT_TYPE"] = "\u05D0\u05D5\u05E4\u05DF \u05D4\u05DE\u05E9\u05DC\u05D5\u05D7";
     ImportColumns["ADDRESS"] = "\u05DB\u05EA\u05D5\u05D1\u05EA \u05D4\u05DE\u05E9\u05DC\u05D5\u05D7";
