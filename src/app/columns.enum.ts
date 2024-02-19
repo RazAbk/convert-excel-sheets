@@ -8,7 +8,7 @@ export enum ImportColumns {
   EMAIL = "מייל",
   PRODUCT_NAME = "שם המוצר",
   QUANTITY = "כמות",
-  PRIVE_INC_TAX = "סה״כ כולל מע״מ",
+  PRICE_INC_TAX = "סה״כ כולל מע״מ",
   CURRENCY = "מטבע",
   SHIPMENT_TYPE = "אופן המשלוח",
   ADDRESS = "כתובת המשלוח",

@@ -73,7 +73,14 @@ export class AppComponent implements OnInit {
         [ExportColumns.ID]: originalRow[ImportColumns.PRODUCT_NAME],
         [ExportColumns.DESCRIPTION]: "",
         [ExportColumns.QUANTITY]: originalRow[ImportColumns.QUANTITY],
-        [ExportColumns.PRICE_BEFORE_TAX]: originalRow[ImportColumns.PRIVE_INC_TAX],
+        [ExportColumns.PRICE_BEFORE_TAX]: `${(+originalRow[ImportColumns.PRICE_INC_TAX] / 1.17 / +originalRow[ImportColumns.QUANTITY]).toFixed(2)}`,
+      })
+
+      // משלוח
+      modifiedFinalObj.push({
+        [ExportColumns.TYPE]: "2",
+        [ExportColumns.ID]: "2BF-24MONITOR",
+        [ExportColumns.QUANTITY]: originalRow[ImportColumns.QUANTITY],
       })
 
       // משלוח
@@ -90,8 +97,8 @@ export class AppComponent implements OnInit {
         [ExportColumns.TELEPHONE_NUM]: originalRow[ImportColumns.COSTUMER_TELEPHONE],
         [ExportColumns.EMAIL]: originalRow[ImportColumns.EMAIL],
         [ExportColumns.ADDRESS1]: originalRow[ImportColumns.ADDRESS],
-        [ExportColumns.ADDRESS2]: "",
-        [ExportColumns.ADDRESS3]: originalRow[ImportColumns.TELEPHONE_SHIPPING],
+        [ExportColumns.ADDRESS2]: originalRow[ImportColumns.TEXT_SHIPMENT],
+        [ExportColumns.ADDRESS3]: `${originalRow[ImportColumns.COSTUMER_TELEPHONE]}`.includes(`${originalRow[ImportColumns.TELEPHONE_SHIPPING]}`) ? "" : originalRow[ImportColumns.TELEPHONE_SHIPPING],
         [ExportColumns.CITY]: originalRow[ImportColumns.CITY],
       })
 
@@ -110,7 +117,7 @@ export class AppComponent implements OnInit {
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, "Data");
 
-    XLSX.writeFile(wb, "asdf.xlsx")
+    XLSX.writeFile(wb, "2BF_ORDERS_EXPORT.xlsx")
   }
 }
 
