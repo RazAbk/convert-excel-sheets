@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ImportColumns, ExportColumns } from './columns.enum';
+import { ImportColumns, ExportColumns, RegularPC, LaptopPC } from './columns.enum';
 import * as XLSX from 'xlsx';
 
 @Component({
@@ -57,56 +57,110 @@ export class AppComponent implements OnInit {
   createXLSX(rawRows: { [key in ImportColumns]: string }[]) {
     return rawRows.reduce((modifiedFinalObj: any[], originalRow: { [key in ImportColumns]: string }) => {
 
-      // פרטים של ההזמנה
-      modifiedFinalObj.push({
-        [ExportColumns.TYPE]: "1",
-        [ExportColumns.COSTUMER_NUM]: "101162",
-        [ExportColumns.COSTUMER_NAME]: `${originalRow[ImportColumns.COSTUMER_NAME]} ${originalRow[ImportColumns.COSTUMER_LAST_NAME]}`,
-        [ExportColumns.ORDER_DATE]: originalRow[ImportColumns.ORDER_DATE],
-        [ExportColumns.ORDER_NUM]: originalRow[ImportColumns.ORDER_NUM],
-        [ExportColumns.DETAILS]: originalRow[ImportColumns.SHIPMENT_TYPE],
-      })
+      switch (originalRow[ImportColumns.PRODUCT_NAME]) {
+        case RegularPC.PC1:
+        case RegularPC.PC2:
+        case RegularPC.PC3:
+          // פרטים של ההזמנה
+          modifiedFinalObj.push({
+            [ExportColumns.TYPE]: "1",
+            [ExportColumns.COSTUMER_NUM]: "101162",
+            [ExportColumns.COSTUMER_NAME]: `${originalRow[ImportColumns.COSTUMER_NAME]} ${originalRow[ImportColumns.COSTUMER_LAST_NAME]}`,
+            [ExportColumns.ORDER_DATE]: originalRow[ImportColumns.ORDER_DATE],
+            [ExportColumns.ORDER_NUM]: originalRow[ImportColumns.ORDER_NUM],
+            [ExportColumns.DETAILS]: originalRow[ImportColumns.SHIPMENT_TYPE],
+          })
 
-      // פרטים של המוצר
-      modifiedFinalObj.push({
-        [ExportColumns.TYPE]: "2",
-        [ExportColumns.ID]: originalRow[ImportColumns.PRODUCT_NAME],
-        [ExportColumns.DESCRIPTION]: "",
-        [ExportColumns.QUANTITY]: originalRow[ImportColumns.QUANTITY],
-        [ExportColumns.PRICE_BEFORE_TAX]: `${(+originalRow[ImportColumns.PRICE_INC_TAX] / 1.17 / +originalRow[ImportColumns.QUANTITY]).toFixed(2)}`,
-      })
+          // פרטים של המוצר
+          modifiedFinalObj.push({
+            [ExportColumns.TYPE]: "2",
+            [ExportColumns.ID]: originalRow[ImportColumns.PRODUCT_NAME],
+            [ExportColumns.DESCRIPTION]: "",
+            [ExportColumns.QUANTITY]: originalRow[ImportColumns.QUANTITY],
+            [ExportColumns.PRICE_BEFORE_TAX]: `${(+originalRow[ImportColumns.PRICE_INC_TAX] / 1.17 / +originalRow[ImportColumns.QUANTITY]).toFixed(2)}`,
+          })
 
-      // משלוח
-      modifiedFinalObj.push({
-        [ExportColumns.TYPE]: "2",
-        [ExportColumns.ID]: "2BF-24MONITOR",
-        [ExportColumns.QUANTITY]: originalRow[ImportColumns.QUANTITY],
-      })
+          // מסך
+          modifiedFinalObj.push({
+            [ExportColumns.TYPE]: "2",
+            [ExportColumns.ID]: "2BF-24MONITOR",
+            [ExportColumns.QUANTITY]: originalRow[ImportColumns.QUANTITY],
+          });
 
-      // משלוח
-      modifiedFinalObj.push({
-        [ExportColumns.TYPE]: "2",
-        [ExportColumns.ID]: "5",
-        [ExportColumns.QUANTITY]: "1",
-      })
+          // משלוח
+          modifiedFinalObj.push({
+            [ExportColumns.TYPE]: "2",
+            [ExportColumns.ID]: "5",
+            [ExportColumns.QUANTITY]: "1",
+          });
 
-      // פרטים של הלקוח
-      modifiedFinalObj.push({
-        [ExportColumns.TYPE]: "3",
-        [ExportColumns.COSTUMER_CONTACT]: `${originalRow[ImportColumns.COSTUMER_NAME]} ${originalRow[ImportColumns.COSTUMER_LAST_NAME]}`,
-        [ExportColumns.TELEPHONE_NUM]: originalRow[ImportColumns.COSTUMER_TELEPHONE],
-        [ExportColumns.EMAIL]: originalRow[ImportColumns.EMAIL],
-        [ExportColumns.ADDRESS1]: originalRow[ImportColumns.ADDRESS],
-        [ExportColumns.ADDRESS2]: originalRow[ImportColumns.TEXT_SHIPMENT],
-        [ExportColumns.ADDRESS3]: `${originalRow[ImportColumns.COSTUMER_TELEPHONE]}`.includes(`${originalRow[ImportColumns.TELEPHONE_SHIPPING]}`) ? "" : originalRow[ImportColumns.TELEPHONE_SHIPPING],
-        [ExportColumns.CITY]: originalRow[ImportColumns.CITY],
-      })
+          // פרטים של הלקוח
+          modifiedFinalObj.push({
+            [ExportColumns.TYPE]: "3",
+            [ExportColumns.COSTUMER_CONTACT]: `${originalRow[ImportColumns.COSTUMER_NAME]} ${originalRow[ImportColumns.COSTUMER_LAST_NAME]}`,
+            [ExportColumns.TELEPHONE_NUM]: originalRow[ImportColumns.COSTUMER_TELEPHONE],
+            [ExportColumns.EMAIL]: originalRow[ImportColumns.EMAIL],
+            [ExportColumns.ADDRESS1]: originalRow[ImportColumns.ADDRESS],
+            [ExportColumns.ADDRESS2]: originalRow[ImportColumns.TEXT_SHIPMENT],
+            [ExportColumns.ADDRESS3]: `${originalRow[ImportColumns.COSTUMER_TELEPHONE]}`.includes(`${originalRow[ImportColumns.TELEPHONE_SHIPPING]}`) ? "" : originalRow[ImportColumns.TELEPHONE_SHIPPING],
+            [ExportColumns.CITY]: originalRow[ImportColumns.CITY],
+          });
 
-      // טקסט להזמנה
-      modifiedFinalObj.push({
-        [ExportColumns.TYPE]: "4",
-        [ExportColumns.TEXT]: originalRow[ImportColumns.TEXT_SHIPMENT],
-      })
+          // טקסט להזמנה
+          modifiedFinalObj.push({
+            [ExportColumns.TYPE]: "4",
+            [ExportColumns.TEXT]: originalRow[ImportColumns.TEXT_SHIPMENT],
+          });
+          break;
+        case LaptopPC.LAPTOP1:
+        case LaptopPC.LAPTOP2:
+
+          // פרטים של ההזמנה
+          modifiedFinalObj.push({
+            [ExportColumns.TYPE]: "1",
+            [ExportColumns.COSTUMER_NUM]: "101162",
+            [ExportColumns.COSTUMER_NAME]: `${originalRow[ImportColumns.COSTUMER_NAME]} ${originalRow[ImportColumns.COSTUMER_LAST_NAME]}`,
+            [ExportColumns.ORDER_DATE]: originalRow[ImportColumns.ORDER_DATE],
+            [ExportColumns.ORDER_NUM]: originalRow[ImportColumns.ORDER_NUM],
+            [ExportColumns.DETAILS]: originalRow[ImportColumns.SHIPMENT_TYPE],
+          });
+
+          // פרטים של המוצר
+          modifiedFinalObj.push({
+            [ExportColumns.TYPE]: "2",
+            [ExportColumns.ID]: originalRow[ImportColumns.PRODUCT_NAME],
+            [ExportColumns.DESCRIPTION]: "",
+            [ExportColumns.QUANTITY]: originalRow[ImportColumns.QUANTITY],
+            [ExportColumns.PRICE_BEFORE_TAX]: `${(+originalRow[ImportColumns.PRICE_INC_TAX] / 1.17 / +originalRow[ImportColumns.QUANTITY]).toFixed(2)}`,
+          });
+
+          // משלוח
+          modifiedFinalObj.push({
+            [ExportColumns.TYPE]: "2",
+            [ExportColumns.ID]: "5",
+            [ExportColumns.QUANTITY]: "1",
+          });
+
+          // פרטים של הלקוח
+          modifiedFinalObj.push({
+            [ExportColumns.TYPE]: "3",
+            [ExportColumns.COSTUMER_CONTACT]: `${originalRow[ImportColumns.COSTUMER_NAME]} ${originalRow[ImportColumns.COSTUMER_LAST_NAME]}`,
+            [ExportColumns.TELEPHONE_NUM]: originalRow[ImportColumns.COSTUMER_TELEPHONE],
+            [ExportColumns.EMAIL]: originalRow[ImportColumns.EMAIL],
+            [ExportColumns.ADDRESS1]: originalRow[ImportColumns.ADDRESS],
+            [ExportColumns.ADDRESS2]: originalRow[ImportColumns.TEXT_SHIPMENT],
+            [ExportColumns.ADDRESS3]: `${originalRow[ImportColumns.COSTUMER_TELEPHONE]}`.includes(`${originalRow[ImportColumns.TELEPHONE_SHIPPING]}`) ? "" : originalRow[ImportColumns.TELEPHONE_SHIPPING],
+            [ExportColumns.CITY]: originalRow[ImportColumns.CITY],
+          });
+
+          // טקסט להזמנה
+          modifiedFinalObj.push({
+            [ExportColumns.TYPE]: "4",
+            [ExportColumns.TEXT]: originalRow[ImportColumns.TEXT_SHIPMENT],
+          });
+
+          break;
+      }
 
       return modifiedFinalObj;
     }, [])

@@ -39,3 +39,14 @@ export enum ExportColumns {
   CITY = "עיר",
   TEXT = "טקסט להזמנה"
 }
+
+export enum RegularPC {
+  PC1 = "2BF-M92I58GB-KIT",
+  PC2 = "2BF-M92I34GB-KIT",
+  PC3 = "2BF-M92I38GB-KIT",
+}
+
+export enum LaptopPC {
+  LAPTOP1 = "2BF-HP640G3I5-7TH8240",
+  LAPTOP2 = "2BF-HP640G3I5-6TH8240",
+}
