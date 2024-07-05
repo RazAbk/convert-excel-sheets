@@ -1,4 +1,11 @@
-<h1>Upload excel file:</h1>
-<br>
-<input type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
-  (change)="onUpload($event)">
+<div class="main-container">
+  <h1>Convert Excel files:</h1>
+  
+  <h2>2B Friendly:</h2>
+  <input type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+    (change)="onUpload($event, Options.BF_ORDERS_EXPORT)">
+
+  <h2>PC NASDAQ:</h2>
+  <input type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+    (change)="onUpload($event, Options.PCN_ORDERS_EXPORT)">
+</div>
