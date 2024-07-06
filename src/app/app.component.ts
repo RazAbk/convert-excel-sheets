@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ImportColumns_1, ExportColumns_2, RegularPC, LaptopPC, ImportColumns_2, Options } from './columns.enum';
+import { ImportColumns_1, ExportColumns, RegularPC, LaptopPC, ImportColumns_2, Options } from './columns.enum';
 import * as XLSX from 'xlsx';
 
 @Component({
@@ -68,54 +68,54 @@ export class AppComponent implements OnInit {
             case RegularPC.PC3:
               // פרטים של ההזמנה
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "1",
-                [ExportColumns_2.COSTUMER_NUM]: "101162",
-                [ExportColumns_2.COSTUMER_NAME]: `${originalRow[ImportColumns_1.COSTUMER_NAME]} ${originalRow[ImportColumns_1.COSTUMER_LAST_NAME]}`,
-                [ExportColumns_2.ORDER_DATE]: originalRow[ImportColumns_1.ORDER_DATE],
-                [ExportColumns_2.ORDER_NUM]: originalRow[ImportColumns_1.ORDER_NUM],
-                [ExportColumns_2.DETAILS]: originalRow[ImportColumns_1.SHIPMENT_TYPE],
-                [ExportColumns_2.PRIORITY_STATUS]: "",
+                [ExportColumns.TYPE]: "1",
+                [ExportColumns.COSTUMER_NUM]: "101162",
+                [ExportColumns.COSTUMER_NAME]: `${originalRow[ImportColumns_1.COSTUMER_NAME]} ${originalRow[ImportColumns_1.COSTUMER_LAST_NAME]}`,
+                [ExportColumns.ORDER_DATE]: originalRow[ImportColumns_1.ORDER_DATE],
+                [ExportColumns.ORDER_NUM]: originalRow[ImportColumns_1.ORDER_NUM],
+                [ExportColumns.DETAILS]: originalRow[ImportColumns_1.SHIPMENT_TYPE],
+                [ExportColumns.PRIORITY_STATUS]: "",
               })
 
               // פרטים של המוצר
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "2",
-                [ExportColumns_2.ID]: originalRow[ImportColumns_1.PRODUCT_NAME],
-                [ExportColumns_2.DESCRIPTION]: "",
-                [ExportColumns_2.QUANTITY]: originalRow[ImportColumns_1.QUANTITY],
-                [ExportColumns_2.PRICE_BEFORE_TAX]: `${(+originalRow[ImportColumns_1.PRICE_INC_TAX] / 1.17 / +originalRow[ImportColumns_1.QUANTITY]).toFixed(2)}`,
+                [ExportColumns.TYPE]: "2",
+                [ExportColumns.ID]: originalRow[ImportColumns_1.PRODUCT_NAME],
+                [ExportColumns.DESCRIPTION]: "",
+                [ExportColumns.QUANTITY]: originalRow[ImportColumns_1.QUANTITY],
+                [ExportColumns.PRICE_BEFORE_TAX]: `${(+originalRow[ImportColumns_1.PRICE_INC_TAX] / 1.17 / +originalRow[ImportColumns_1.QUANTITY]).toFixed(2)}`,
               })
 
               // מסך
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "2",
-                [ExportColumns_2.ID]: "2BF-24MONITOR",
-                [ExportColumns_2.QUANTITY]: originalRow[ImportColumns_1.QUANTITY],
+                [ExportColumns.TYPE]: "2",
+                [ExportColumns.ID]: "2BF-24MONITOR",
+                [ExportColumns.QUANTITY]: originalRow[ImportColumns_1.QUANTITY],
               });
 
               // משלוח
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "2",
-                [ExportColumns_2.ID]: "5",
-                [ExportColumns_2.QUANTITY]: "1",
+                [ExportColumns.TYPE]: "2",
+                [ExportColumns.ID]: "5",
+                [ExportColumns.QUANTITY]: "1",
               });
 
               // פרטים של הלקוח
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "3",
-                [ExportColumns_2.COSTUMER_CONTACT]: `${originalRow[ImportColumns_1.COSTUMER_NAME]} ${originalRow[ImportColumns_1.COSTUMER_LAST_NAME]}`,
-                [ExportColumns_2.TELEPHONE_NUM]: originalRow[ImportColumns_1.COSTUMER_TELEPHONE],
-                [ExportColumns_2.EMAIL]: originalRow[ImportColumns_1.EMAIL],
-                [ExportColumns_2.ADDRESS1]: originalRow[ImportColumns_1.ADDRESS],
-                [ExportColumns_2.ADDRESS2]: originalRow[ImportColumns_1.TEXT_SHIPMENT],
-                [ExportColumns_2.ADDRESS3]: `${originalRow[ImportColumns_1.COSTUMER_TELEPHONE]}`.includes(`${originalRow[ImportColumns_1.TELEPHONE_SHIPPING]}`) ? "" : originalRow[ImportColumns_1.TELEPHONE_SHIPPING],
-                [ExportColumns_2.CITY]: originalRow[ImportColumns_1.CITY],
+                [ExportColumns.TYPE]: "3",
+                [ExportColumns.COSTUMER_CONTACT]: `${originalRow[ImportColumns_1.COSTUMER_NAME]} ${originalRow[ImportColumns_1.COSTUMER_LAST_NAME]}`,
+                [ExportColumns.TELEPHONE_NUM]: originalRow[ImportColumns_1.COSTUMER_TELEPHONE],
+                [ExportColumns.EMAIL]: originalRow[ImportColumns_1.EMAIL],
+                [ExportColumns.ADDRESS1]: originalRow[ImportColumns_1.ADDRESS],
+                [ExportColumns.ADDRESS2]: originalRow[ImportColumns_1.TEXT_SHIPMENT],
+                [ExportColumns.ADDRESS3]: `${originalRow[ImportColumns_1.COSTUMER_TELEPHONE]}`.includes(`${originalRow[ImportColumns_1.TELEPHONE_SHIPPING]}`) ? "" : originalRow[ImportColumns_1.TELEPHONE_SHIPPING],
+                [ExportColumns.CITY]: originalRow[ImportColumns_1.CITY],
               });
 
               // טקסט להזמנה
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "4",
-                [ExportColumns_2.TEXT]: originalRow[ImportColumns_1.TEXT_SHIPMENT],
+                [ExportColumns.TYPE]: "4",
+                [ExportColumns.TEXT]: originalRow[ImportColumns_1.TEXT_SHIPMENT],
               });
               break;
             case LaptopPC.LAPTOP1:
@@ -123,47 +123,47 @@ export class AppComponent implements OnInit {
 
               // פרטים של ההזמנה
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "1",
-                [ExportColumns_2.COSTUMER_NUM]: "101162",
-                [ExportColumns_2.COSTUMER_NAME]: `${originalRow[ImportColumns_1.COSTUMER_NAME]} ${originalRow[ImportColumns_1.COSTUMER_LAST_NAME]}`,
-                [ExportColumns_2.ORDER_DATE]: originalRow[ImportColumns_1.ORDER_DATE],
-                [ExportColumns_2.ORDER_NUM]: originalRow[ImportColumns_1.ORDER_NUM],
-                [ExportColumns_2.DETAILS]: originalRow[ImportColumns_1.SHIPMENT_TYPE],
-                [ExportColumns_2.PRIORITY_STATUS]: "",
+                [ExportColumns.TYPE]: "1",
+                [ExportColumns.COSTUMER_NUM]: "101162",
+                [ExportColumns.COSTUMER_NAME]: `${originalRow[ImportColumns_1.COSTUMER_NAME]} ${originalRow[ImportColumns_1.COSTUMER_LAST_NAME]}`,
+                [ExportColumns.ORDER_DATE]: originalRow[ImportColumns_1.ORDER_DATE],
+                [ExportColumns.ORDER_NUM]: originalRow[ImportColumns_1.ORDER_NUM],
+                [ExportColumns.DETAILS]: originalRow[ImportColumns_1.SHIPMENT_TYPE],
+                [ExportColumns.PRIORITY_STATUS]: "",
               });
 
               // פרטים של המוצר
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "2",
-                [ExportColumns_2.ID]: originalRow[ImportColumns_1.PRODUCT_NAME],
-                [ExportColumns_2.DESCRIPTION]: "",
-                [ExportColumns_2.QUANTITY]: originalRow[ImportColumns_1.QUANTITY],
-                [ExportColumns_2.PRICE_BEFORE_TAX]: `${(+originalRow[ImportColumns_1.PRICE_INC_TAX] / 1.17 / +originalRow[ImportColumns_1.QUANTITY]).toFixed(2)}`,
+                [ExportColumns.TYPE]: "2",
+                [ExportColumns.ID]: originalRow[ImportColumns_1.PRODUCT_NAME],
+                [ExportColumns.DESCRIPTION]: "",
+                [ExportColumns.QUANTITY]: originalRow[ImportColumns_1.QUANTITY],
+                [ExportColumns.PRICE_BEFORE_TAX]: `${(+originalRow[ImportColumns_1.PRICE_INC_TAX] / 1.17 / +originalRow[ImportColumns_1.QUANTITY]).toFixed(2)}`,
               });
 
               // משלוח
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "2",
-                [ExportColumns_2.ID]: "5",
-                [ExportColumns_2.QUANTITY]: "1",
+                [ExportColumns.TYPE]: "2",
+                [ExportColumns.ID]: "5",
+                [ExportColumns.QUANTITY]: "1",
               });
 
               // פרטים של הלקוח
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "3",
-                [ExportColumns_2.COSTUMER_CONTACT]: `${originalRow[ImportColumns_1.COSTUMER_NAME]} ${originalRow[ImportColumns_1.COSTUMER_LAST_NAME]}`,
-                [ExportColumns_2.TELEPHONE_NUM]: originalRow[ImportColumns_1.COSTUMER_TELEPHONE],
-                [ExportColumns_2.EMAIL]: originalRow[ImportColumns_1.EMAIL],
-                [ExportColumns_2.ADDRESS1]: originalRow[ImportColumns_1.ADDRESS],
-                [ExportColumns_2.ADDRESS2]: originalRow[ImportColumns_1.TEXT_SHIPMENT],
-                [ExportColumns_2.ADDRESS3]: `${originalRow[ImportColumns_1.COSTUMER_TELEPHONE]}`.includes(`${originalRow[ImportColumns_1.TELEPHONE_SHIPPING]}`) ? "" : originalRow[ImportColumns_1.TELEPHONE_SHIPPING],
-                [ExportColumns_2.CITY]: originalRow[ImportColumns_1.CITY],
+                [ExportColumns.TYPE]: "3",
+                [ExportColumns.COSTUMER_CONTACT]: `${originalRow[ImportColumns_1.COSTUMER_NAME]} ${originalRow[ImportColumns_1.COSTUMER_LAST_NAME]}`,
+                [ExportColumns.TELEPHONE_NUM]: originalRow[ImportColumns_1.COSTUMER_TELEPHONE],
+                [ExportColumns.EMAIL]: originalRow[ImportColumns_1.EMAIL],
+                [ExportColumns.ADDRESS1]: originalRow[ImportColumns_1.ADDRESS],
+                [ExportColumns.ADDRESS2]: originalRow[ImportColumns_1.TEXT_SHIPMENT],
+                [ExportColumns.ADDRESS3]: `${originalRow[ImportColumns_1.COSTUMER_TELEPHONE]}`.includes(`${originalRow[ImportColumns_1.TELEPHONE_SHIPPING]}`) ? "" : originalRow[ImportColumns_1.TELEPHONE_SHIPPING],
+                [ExportColumns.CITY]: originalRow[ImportColumns_1.CITY],
               });
 
               // טקסט להזמנה
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "4",
-                [ExportColumns_2.TEXT]: originalRow[ImportColumns_1.TEXT_SHIPMENT],
+                [ExportColumns.TYPE]: "4",
+                [ExportColumns.TEXT]: originalRow[ImportColumns_1.TEXT_SHIPMENT],
               });
 
               break;
@@ -196,7 +196,7 @@ export class AppComponent implements OnInit {
           const orderDate = new Date(originalRow[ImportColumns_2.Order_Date]);
           const prettyDate = this._formatDate(orderDate);
 
-          const startOrderIdx = modifiedFinalObj.findIndex((finalRow: any) => finalRow[ExportColumns_2.ORDER_NUM] === originalRow[ImportColumns_2.Order_ID])
+          const startOrderIdx = modifiedFinalObj.findIndex((finalRow: any) => finalRow[ExportColumns.ORDER_NUM] === originalRow[ImportColumns_2.Order_ID])
 
           const orderFullName = `${originalRow?.[ImportColumns_2.Billing_First_Name] ?? ""} ${originalRow?.[ImportColumns_2.Billing_Last_Name] ?? ""} ${originalRow?.[ImportColumns_2.Billing_Company] ?? ""}`.trim();
 
@@ -207,22 +207,23 @@ export class AppComponent implements OnInit {
             }
 
             finalProductsToPush[originalRow[ImportColumns_2.Order_ID]].push({
-              [ExportColumns_2.TYPE]: "2",
-              [ExportColumns_2.ID]: originalRow[ImportColumns_2.SKU] || "SPARE",
-              [ExportColumns_2.DESCRIPTION]: "",
-              [ExportColumns_2.QUANTITY]: originalRow[ImportColumns_2.Quantity],
-              [ExportColumns_2.PRICE_BEFORE_TAX]: `${this._stringToNumber(`${originalRow[ImportColumns_2.Item_Cost]}`)}`,
+              [ExportColumns.TYPE]: "2",
+              [ExportColumns.ID]: originalRow[ImportColumns_2.SKU] || "SPARE",
+              [ExportColumns.DESCRIPTION]: "",
+              [ExportColumns.QUANTITY]: originalRow[ImportColumns_2.Quantity],
+              [ExportColumns.PRICE_BEFORE_TAX]: `${this._stringToNumber(`${originalRow[ImportColumns_2.Item_Cost]}`)}`,
             });
 
           } else {
             // Regular flow
             modifiedFinalObj.push({
-              [ExportColumns_2.TYPE]: "1",
-              [ExportColumns_2.COSTUMER_NUM]: "100881",
-              [ExportColumns_2.COSTUMER_NAME]: orderFullName,
-              [ExportColumns_2.ORDER_DATE]: prettyDate,
-              [ExportColumns_2.ORDER_NUM]: originalRow[ImportColumns_2.Order_ID],
-              [ExportColumns_2.PRIORITY_STATUS]: "PCN DRAFT",
+              [ExportColumns.TYPE]: "1",
+              [ExportColumns.COSTUMER_NUM]: "100881",
+              [ExportColumns.COSTUMER_NAME]: orderFullName,
+              [ExportColumns.ORDER_DATE]: prettyDate,
+              [ExportColumns.ORDER_NUM]: originalRow[ImportColumns_2.Order_ID],
+              [ExportColumns.DETAILS]: "",
+              [ExportColumns.PRIORITY_STATUS]: "PCN DRAFT",
             });
 
             if (!finalProductsToPush[originalRow[ImportColumns_2.Order_ID]]) {
@@ -230,55 +231,55 @@ export class AppComponent implements OnInit {
             }
 
             finalProductsToPush[originalRow[ImportColumns_2.Order_ID]].push({
-              [ExportColumns_2.TYPE]: "2",
-              [ExportColumns_2.ID]: originalRow[ImportColumns_2.SKU] || "SPARE",
-              [ExportColumns_2.DESCRIPTION]: "",
-              [ExportColumns_2.QUANTITY]: originalRow[ImportColumns_2.Quantity],
-              [ExportColumns_2.PRICE_BEFORE_TAX]: `${this._stringToNumber(`${originalRow[ImportColumns_2.Item_Cost]}`)}`,
+              [ExportColumns.TYPE]: "2",
+              [ExportColumns.ID]: originalRow[ImportColumns_2.SKU] || "SPARE",
+              [ExportColumns.DESCRIPTION]: "",
+              [ExportColumns.QUANTITY]: originalRow[ImportColumns_2.Quantity],
+              [ExportColumns.PRICE_BEFORE_TAX]: `${this._stringToNumber(`${originalRow[ImportColumns_2.Item_Cost]}`)}`,
             });
 
             if (originalRow[ImportColumns_2.Shipping_Name]?.includes("משלוח")) {
               // משלוח
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "2",
-                [ExportColumns_2.ID]: "5",
-                [ExportColumns_2.QUANTITY]: "1",
-                [ExportColumns_2.PRICE_BEFORE_TAX]: "50.43",
+                [ExportColumns.TYPE]: "2",
+                [ExportColumns.ID]: "5",
+                [ExportColumns.QUANTITY]: "1",
+                [ExportColumns.PRICE_BEFORE_TAX]: "50.43",
               });
             } else {
               // איסוף
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "2",
-                [ExportColumns_2.ID]: "6",
-                [ExportColumns_2.QUANTITY]: "1",
+                [ExportColumns.TYPE]: "2",
+                [ExportColumns.ID]: "6",
+                [ExportColumns.QUANTITY]: "1",
               });
             }
 
             if (!!originalRow?.[ImportColumns_2.Rivihit_Invoice]) {
               // רווחית
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "2",
-                [ExportColumns_2.ID]: "הערה",
-                [ExportColumns_2.QUANTITY]: "1",
-                [ExportColumns_2.DESCRIPTION]: `חשבונית מס קבלה ${originalRow?.[ImportColumns_2.Rivihit_Invoice]}`
+                [ExportColumns.TYPE]: "2",
+                [ExportColumns.ID]: "הערה",
+                [ExportColumns.QUANTITY]: "1",
+                [ExportColumns.DESCRIPTION]: `חשבונית מס קבלה ${originalRow?.[ImportColumns_2.Rivihit_Invoice]}`
               });
             } else {
               // אין רווחית
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "2",
-                [ExportColumns_2.ID]: "הערה",
-                [ExportColumns_2.QUANTITY]: "1",
-                [ExportColumns_2.DESCRIPTION]: "אין תקבול להזמנה"
+                [ExportColumns.TYPE]: "2",
+                [ExportColumns.ID]: "הערה",
+                [ExportColumns.QUANTITY]: "1",
+                [ExportColumns.DESCRIPTION]: "אין תקבול להזמנה"
               });
             }
 
             if (!!originalRow?.[ImportColumns_2.Customer_Note]) {
               //  יש הערת לקוח
               modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "2",
-                [ExportColumns_2.ID]: "הערה",
-                [ExportColumns_2.QUANTITY]: "1",
-                [ExportColumns_2.DESCRIPTION]: "יש הערת לקוח"
+                [ExportColumns.TYPE]: "2",
+                [ExportColumns.ID]: "הערה",
+                [ExportColumns.QUANTITY]: "0",
+                [ExportColumns.DESCRIPTION]: "יש הערת לקוח"
               });
             }
 
@@ -286,27 +287,38 @@ export class AppComponent implements OnInit {
 
             // פרטים של הלקוח
             modifiedFinalObj.push({
-              [ExportColumns_2.TYPE]: "3",
-              [ExportColumns_2.COSTUMER_CONTACT]: shippingFullName || orderFullName,
-              [ExportColumns_2.TELEPHONE_NUM]: originalRow[ImportColumns_2.Shipping_Phone] || originalRow[ImportColumns_2.Billing_Phone] || "",
-              [ExportColumns_2.EMAIL]: originalRow[ImportColumns_2.Billing_Email_Address] || "",
-              [ExportColumns_2.ADDRESS1]: originalRow[ImportColumns_2.Shipping_Address_1],
-              [ExportColumns_2.ADDRESS2]: originalRow[ImportColumns_2.Shipping_Address_2],
-              [ExportColumns_2.ADDRESS3]: "",
-              [ExportColumns_2.CITY]: originalRow[ImportColumns_2.Shipping_City],
+              [ExportColumns.TYPE]: "3",
+              [ExportColumns.COSTUMER_CONTACT]: shippingFullName || orderFullName,
+              [ExportColumns.TELEPHONE_NUM]: originalRow[ImportColumns_2.Shipping_Phone] || originalRow[ImportColumns_2.Billing_Phone] || "",
+              [ExportColumns.EMAIL]: originalRow[ImportColumns_2.Billing_Email_Address] || "",
+              [ExportColumns.ADDRESS1]: originalRow[ImportColumns_2.Shipping_Address_1],
+              [ExportColumns.ADDRESS2]: originalRow[ImportColumns_2.Shipping_Address_2],
+              [ExportColumns.ADDRESS3]: "",
+              [ExportColumns.CITY]: originalRow[ImportColumns_2.Shipping_City],
+            });
+
+
+            modifiedFinalObj.push({
+              [ExportColumns.TYPE]: "5",
+              [ExportColumns.TEXT]: ""
             });
 
             if (!!originalRow?.[ImportColumns_2.Customer_Note]) {
-              modifiedFinalObj.push({
-                [ExportColumns_2.TYPE]: "5",
-                [ExportColumns_2.TEXT]: originalRow?.[ImportColumns_2.Customer_Note],
-              });
+              // Convert lines breaks to separate rows in the exported excel
+              const separatedLines = originalRow?.[ImportColumns_2.Customer_Note]?.split("\r\n") ?? [];
+
+              separatedLines.forEach((line: string) => {
+                modifiedFinalObj.push({
+                  [ExportColumns.TYPE]: "5",
+                  [ExportColumns.INNER_TEXT]: line,
+                });
+              })
             }
 
             // טקסט פנימי
             modifiedFinalObj.push({
-              [ExportColumns_2.TYPE]: "5",
-              [ExportColumns_2.TEXT]: "נקלט ע״י מחולל ממשקים",
+              [ExportColumns.TYPE]: "5",
+              [ExportColumns.INNER_TEXT]: `נוצר ע״י מחולל ממשקים ${this._formatDate(new Date(), true)}`
             });
 
           }
@@ -318,8 +330,8 @@ export class AppComponent implements OnInit {
 
         finalExcelWithoutProducts.forEach((row: any, currentIdx: number) => {
           finalExcelWithProducts.push(row);
-          if (row[ExportColumns_2.TYPE] === "1") {
-            finalProductsToPush[row[ExportColumns_2.ORDER_NUM]].forEach((item: any) => {
+          if (row[ExportColumns.TYPE] === "1") {
+            finalProductsToPush[row[ExportColumns.ORDER_NUM]].forEach((item: any) => {
               finalExcelWithProducts.push(item);
             })
           }
@@ -339,14 +351,20 @@ export class AppComponent implements OnInit {
     XLSX.writeFile(wb, `${name}.xlsx`);
   }
 
-  private _formatDate(date: Date): string {
+  private _formatDate(date: Date, withHour = false): string {
     const padZero = (num: number) => num.toString().padStart(2, '0');
 
     const day = padZero(date.getDate());
     const month = padZero(date.getMonth() + 1); // Months are 0-based, so we add 1
     const year = date.getFullYear().toString().slice(-2); // Get the last two digits of the year
 
-    return `${day}/${month}/${year}`;
+    let result = `${day}/${month}/${year}`;
+
+    if (withHour) {
+      const hour = ` ${padZero(date.getHours())}:${padZero(date.getMinutes())}`;
+      result += hour;
+    }
+    return result;
   }
 
   private _stringToNumber(str: string): number {

@@ -132,92 +132,92 @@ class AppComponent {
                         case _columns_enum__WEBPACK_IMPORTED_MODULE_0__["RegularPC"].PC3:
                             // פרטים של ההזמנה
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "1",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].COSTUMER_NUM]: "101162",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].COSTUMER_NAME]: `${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_NAME]} ${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_LAST_NAME]}`,
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ORDER_DATE]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].ORDER_DATE],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ORDER_NUM]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].ORDER_NUM],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].DETAILS]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].SHIPMENT_TYPE],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].PRIORITY_STATUS]: "",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "1",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].COSTUMER_NUM]: "101162",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].COSTUMER_NAME]: `${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_NAME]} ${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_LAST_NAME]}`,
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ORDER_DATE]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].ORDER_DATE],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ORDER_NUM]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].ORDER_NUM],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].DETAILS]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].SHIPMENT_TYPE],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].PRIORITY_STATUS]: "",
                             });
                             // פרטים של המוצר
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "2",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ID]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].PRODUCT_NAME],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].DESCRIPTION]: "",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].QUANTITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].QUANTITY],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].PRICE_BEFORE_TAX]: `${(+originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].PRICE_INC_TAX] / 1.17 / +originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].QUANTITY]).toFixed(2)}`,
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "2",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ID]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].PRODUCT_NAME],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].DESCRIPTION]: "",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].QUANTITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].QUANTITY],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].PRICE_BEFORE_TAX]: `${(+originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].PRICE_INC_TAX] / 1.17 / +originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].QUANTITY]).toFixed(2)}`,
                             });
                             // מסך
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "2",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ID]: "2BF-24MONITOR",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].QUANTITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].QUANTITY],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "2",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ID]: "2BF-24MONITOR",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].QUANTITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].QUANTITY],
                             });
                             // משלוח
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "2",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ID]: "5",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].QUANTITY]: "1",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "2",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ID]: "5",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].QUANTITY]: "1",
                             });
                             // פרטים של הלקוח
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "3",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].COSTUMER_CONTACT]: `${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_NAME]} ${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_LAST_NAME]}`,
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TELEPHONE_NUM]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_TELEPHONE],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].EMAIL]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].EMAIL],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ADDRESS1]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].ADDRESS],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ADDRESS2]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TEXT_SHIPMENT],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ADDRESS3]: `${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_TELEPHONE]}`.includes(`${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TELEPHONE_SHIPPING]}`) ? "" : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TELEPHONE_SHIPPING],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].CITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].CITY],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "3",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].COSTUMER_CONTACT]: `${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_NAME]} ${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_LAST_NAME]}`,
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TELEPHONE_NUM]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_TELEPHONE],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].EMAIL]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].EMAIL],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ADDRESS1]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].ADDRESS],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ADDRESS2]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TEXT_SHIPMENT],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ADDRESS3]: `${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_TELEPHONE]}`.includes(`${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TELEPHONE_SHIPPING]}`) ? "" : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TELEPHONE_SHIPPING],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].CITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].CITY],
                             });
                             // טקסט להזמנה
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "4",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TEXT]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TEXT_SHIPMENT],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "4",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TEXT]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TEXT_SHIPMENT],
                             });
                             break;
                         case _columns_enum__WEBPACK_IMPORTED_MODULE_0__["LaptopPC"].LAPTOP1:
                         case _columns_enum__WEBPACK_IMPORTED_MODULE_0__["LaptopPC"].LAPTOP2:
                             // פרטים של ההזמנה
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "1",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].COSTUMER_NUM]: "101162",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].COSTUMER_NAME]: `${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_NAME]} ${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_LAST_NAME]}`,
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ORDER_DATE]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].ORDER_DATE],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ORDER_NUM]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].ORDER_NUM],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].DETAILS]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].SHIPMENT_TYPE],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].PRIORITY_STATUS]: "",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "1",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].COSTUMER_NUM]: "101162",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].COSTUMER_NAME]: `${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_NAME]} ${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_LAST_NAME]}`,
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ORDER_DATE]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].ORDER_DATE],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ORDER_NUM]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].ORDER_NUM],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].DETAILS]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].SHIPMENT_TYPE],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].PRIORITY_STATUS]: "",
                             });
                             // פרטים של המוצר
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "2",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ID]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].PRODUCT_NAME],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].DESCRIPTION]: "",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].QUANTITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].QUANTITY],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].PRICE_BEFORE_TAX]: `${(+originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].PRICE_INC_TAX] / 1.17 / +originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].QUANTITY]).toFixed(2)}`,
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "2",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ID]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].PRODUCT_NAME],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].DESCRIPTION]: "",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].QUANTITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].QUANTITY],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].PRICE_BEFORE_TAX]: `${(+originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].PRICE_INC_TAX] / 1.17 / +originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].QUANTITY]).toFixed(2)}`,
                             });
                             // משלוח
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "2",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ID]: "5",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].QUANTITY]: "1",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "2",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ID]: "5",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].QUANTITY]: "1",
                             });
                             // פרטים של הלקוח
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "3",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].COSTUMER_CONTACT]: `${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_NAME]} ${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_LAST_NAME]}`,
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TELEPHONE_NUM]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_TELEPHONE],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].EMAIL]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].EMAIL],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ADDRESS1]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].ADDRESS],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ADDRESS2]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TEXT_SHIPMENT],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ADDRESS3]: `${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_TELEPHONE]}`.includes(`${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TELEPHONE_SHIPPING]}`) ? "" : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TELEPHONE_SHIPPING],
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].CITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].CITY],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "3",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].COSTUMER_CONTACT]: `${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_NAME]} ${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_LAST_NAME]}`,
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TELEPHONE_NUM]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_TELEPHONE],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].EMAIL]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].EMAIL],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ADDRESS1]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].ADDRESS],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ADDRESS2]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TEXT_SHIPMENT],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ADDRESS3]: `${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].COSTUMER_TELEPHONE]}`.includes(`${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TELEPHONE_SHIPPING]}`) ? "" : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TELEPHONE_SHIPPING],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].CITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].CITY],
                             });
                             // טקסט להזמנה
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "4",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TEXT]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TEXT_SHIPMENT],
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "4",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TEXT]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_1"].TEXT_SHIPMENT],
                             });
                             break;
                     }
@@ -239,10 +239,10 @@ class AppComponent {
                 });
                 const finalProductsToPush = {};
                 const finalExcelWithoutProducts = filteredByStatusRawRows.reduce((modifiedFinalObj, originalRow) => {
-                    var _a, _b, _c, _d, _e, _f, _g;
+                    var _a, _b, _c, _d, _e, _f, _g, _h, _j;
                     const orderDate = new Date(originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Order_Date]);
                     const prettyDate = this._formatDate(orderDate);
-                    const startOrderIdx = modifiedFinalObj.findIndex((finalRow) => finalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ORDER_NUM] === originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Order_ID]);
+                    const startOrderIdx = modifiedFinalObj.findIndex((finalRow) => finalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ORDER_NUM] === originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Order_ID]);
                     const orderFullName = `${(_a = originalRow === null || originalRow === void 0 ? void 0 : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Billing_First_Name]) !== null && _a !== void 0 ? _a : ""} ${(_b = originalRow === null || originalRow === void 0 ? void 0 : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Billing_Last_Name]) !== null && _b !== void 0 ? _b : ""} ${(_c = originalRow === null || originalRow === void 0 ? void 0 : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Billing_Company]) !== null && _c !== void 0 ? _c : ""}`.trim();
                     if (startOrderIdx !== -1) {
                         // Order_Id already exists, just add new products to the order, [ExportColumns_2.TYPE]: "2",
@@ -250,99 +250,108 @@ class AppComponent {
                             finalProductsToPush[originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Order_ID]] = [];
                         }
                         finalProductsToPush[originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Order_ID]].push({
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "2",
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ID]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].SKU] || "SPARE",
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].DESCRIPTION]: "",
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].QUANTITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Quantity],
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].PRICE_BEFORE_TAX]: `${this._stringToNumber(`${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Item_Cost]}`)}`,
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "2",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ID]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].SKU] || "SPARE",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].DESCRIPTION]: "",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].QUANTITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Quantity],
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].PRICE_BEFORE_TAX]: `${this._stringToNumber(`${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Item_Cost]}`)}`,
                         });
                     }
                     else {
                         // Regular flow
                         modifiedFinalObj.push({
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "1",
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].COSTUMER_NUM]: "100881",
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].COSTUMER_NAME]: orderFullName,
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ORDER_DATE]: prettyDate,
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ORDER_NUM]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Order_ID],
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].PRIORITY_STATUS]: "PCN DRAFT",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "1",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].COSTUMER_NUM]: "100881",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].COSTUMER_NAME]: orderFullName,
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ORDER_DATE]: prettyDate,
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ORDER_NUM]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Order_ID],
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].DETAILS]: "",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].PRIORITY_STATUS]: "PCN DRAFT",
                         });
                         if (!finalProductsToPush[originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Order_ID]]) {
                             finalProductsToPush[originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Order_ID]] = [];
                         }
                         finalProductsToPush[originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Order_ID]].push({
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "2",
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ID]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].SKU] || "SPARE",
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].DESCRIPTION]: "",
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].QUANTITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Quantity],
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].PRICE_BEFORE_TAX]: `${this._stringToNumber(`${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Item_Cost]}`)}`,
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "2",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ID]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].SKU] || "SPARE",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].DESCRIPTION]: "",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].QUANTITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Quantity],
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].PRICE_BEFORE_TAX]: `${this._stringToNumber(`${originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Item_Cost]}`)}`,
                         });
                         if ((_d = originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Shipping_Name]) === null || _d === void 0 ? void 0 : _d.includes("משלוח")) {
                             // משלוח
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "2",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ID]: "5",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].QUANTITY]: "1",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].PRICE_BEFORE_TAX]: "50.43",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "2",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ID]: "5",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].QUANTITY]: "1",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].PRICE_BEFORE_TAX]: "50.43",
                             });
                         }
                         else {
                             // איסוף
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "2",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ID]: "6",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].QUANTITY]: "1",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "2",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ID]: "6",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].QUANTITY]: "1",
                             });
                         }
                         if (!!(originalRow === null || originalRow === void 0 ? void 0 : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Rivihit_Invoice])) {
                             // רווחית
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "2",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ID]: "הערה",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].QUANTITY]: "1",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].DESCRIPTION]: `חשבונית מס קבלה ${originalRow === null || originalRow === void 0 ? void 0 : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Rivihit_Invoice]}`
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "2",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ID]: "הערה",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].QUANTITY]: "1",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].DESCRIPTION]: `חשבונית מס קבלה ${originalRow === null || originalRow === void 0 ? void 0 : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Rivihit_Invoice]}`
                             });
                         }
                         else {
                             // אין רווחית
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "2",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ID]: "הערה",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].QUANTITY]: "1",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].DESCRIPTION]: "אין תקבול להזמנה"
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "2",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ID]: "הערה",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].QUANTITY]: "1",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].DESCRIPTION]: "אין תקבול להזמנה"
                             });
                         }
                         if (!!(originalRow === null || originalRow === void 0 ? void 0 : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Customer_Note])) {
                             //  יש הערת לקוח
                             modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "2",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ID]: "הערה",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].QUANTITY]: "1",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].DESCRIPTION]: "יש הערת לקוח"
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "2",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ID]: "הערה",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].QUANTITY]: "0",
+                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].DESCRIPTION]: "יש הערת לקוח"
                             });
                         }
                         const shippingFullName = `${(_e = originalRow === null || originalRow === void 0 ? void 0 : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Shipping_First_Name]) !== null && _e !== void 0 ? _e : ""} ${(_f = originalRow === null || originalRow === void 0 ? void 0 : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Shipping_Last_Name]) !== null && _f !== void 0 ? _f : ""} ${(_g = originalRow === null || originalRow === void 0 ? void 0 : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Shipping_Company]) !== null && _g !== void 0 ? _g : ""}`.trim();
                         // פרטים של הלקוח
                         modifiedFinalObj.push({
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "3",
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].COSTUMER_CONTACT]: shippingFullName || orderFullName,
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TELEPHONE_NUM]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Shipping_Phone] || originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Billing_Phone] || "",
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].EMAIL]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Billing_Email_Address] || "",
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ADDRESS1]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Shipping_Address_1],
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ADDRESS2]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Shipping_Address_2],
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ADDRESS3]: "",
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].CITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Shipping_City],
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "3",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].COSTUMER_CONTACT]: shippingFullName || orderFullName,
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TELEPHONE_NUM]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Shipping_Phone] || originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Billing_Phone] || "",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].EMAIL]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Billing_Email_Address] || "",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ADDRESS1]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Shipping_Address_1],
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ADDRESS2]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Shipping_Address_2],
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ADDRESS3]: "",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].CITY]: originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Shipping_City],
+                        });
+                        modifiedFinalObj.push({
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "5",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TEXT]: ""
                         });
                         if (!!(originalRow === null || originalRow === void 0 ? void 0 : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Customer_Note])) {
-                            modifiedFinalObj.push({
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "5",
-                                [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TEXT]: originalRow === null || originalRow === void 0 ? void 0 : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Customer_Note],
+                            // Convert lines breaks to separate rows in the exported excel
+                            const separatedLines = (_j = (_h = originalRow === null || originalRow === void 0 ? void 0 : originalRow[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ImportColumns_2"].Customer_Note]) === null || _h === void 0 ? void 0 : _h.split("\r\n")) !== null && _j !== void 0 ? _j : [];
+                            separatedLines.forEach((line) => {
+                                modifiedFinalObj.push({
+                                    [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "5",
+                                    [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].INNER_TEXT]: line,
+                                });
                             });
                         }
                         // טקסט פנימי
                         modifiedFinalObj.push({
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE]: "5",
-                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TEXT]: "נקלט ע״י מחולל ממשקים",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE]: "5",
+                            [_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].INNER_TEXT]: `נוצר ע״י מחולל ממשקים ${this._formatDate(new Date(), true)}`
                         });
                     }
                     return modifiedFinalObj;
@@ -350,8 +359,8 @@ class AppComponent {
                 const finalExcelWithProducts = [];
                 finalExcelWithoutProducts.forEach((row, currentIdx) => {
                     finalExcelWithProducts.push(row);
-                    if (row[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].TYPE] === "1") {
-                        finalProductsToPush[row[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns_2"].ORDER_NUM]].forEach((item) => {
+                    if (row[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].TYPE] === "1") {
+                        finalProductsToPush[row[_columns_enum__WEBPACK_IMPORTED_MODULE_0__["ExportColumns"].ORDER_NUM]].forEach((item) => {
                             finalExcelWithProducts.push(item);
                         });
                     }
@@ -367,12 +376,17 @@ class AppComponent {
         xlsx__WEBPACK_IMPORTED_MODULE_1__["utils"].book_append_sheet(wb, ws, "Data");
         xlsx__WEBPACK_IMPORTED_MODULE_1__["writeFile"](wb, `${name}.xlsx`);
     }
-    _formatDate(date) {
+    _formatDate(date, withHour = false) {
         const padZero = (num) => num.toString().padStart(2, '0');
         const day = padZero(date.getDate());
         const month = padZero(date.getMonth() + 1); // Months are 0-based, so we add 1
         const year = date.getFullYear().toString().slice(-2); // Get the last two digits of the year
-        return `${day}/${month}/${year}`;
+        let result = `${day}/${month}/${year}`;
+        if (withHour) {
+            const hour = ` ${padZero(date.getHours())}:${padZero(date.getMinutes())}`;
+            result += hour;
+        }
+        return result;
     }
     _stringToNumber(str) {
         // Remove any commas from the string
@@ -445,15 +459,15 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjector
 /*!*********************************!*\
   !*** ./src/app/columns.enum.ts ***!
   \*********************************/
-/*! exports provided: Options, ImportColumns_1, ExportColumns_2, ImportColumns_2, RegularPC, LaptopPC */
+/*! exports provided: Options, ImportColumns_1, ImportColumns_2, ExportColumns, RegularPC, LaptopPC */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Options", function() { return Options; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImportColumns_1", function() { return ImportColumns_1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExportColumns_2", function() { return ExportColumns_2; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImportColumns_2", function() { return ImportColumns_2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExportColumns", function() { return ExportColumns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegularPC", function() { return RegularPC; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LaptopPC", function() { return LaptopPC; });
 var Options;
@@ -482,28 +496,6 @@ var ImportColumns_1;
     ImportColumns_1["TEXT_SHIPMENT"] = "\u05D4\u05E2\u05E8\u05D4 \u05DC\u05DE\u05E9\u05DC\u05D5\u05D7";
     ImportColumns_1["INTERNAL_COMMENT"] = "\u05D4\u05E2\u05E8\u05D4 \u05E4\u05E0\u05D9\u05DE\u05D9\u05EA";
 })(ImportColumns_1 || (ImportColumns_1 = {}));
-var ExportColumns_2;
-(function (ExportColumns_2) {
-    ExportColumns_2["TYPE"] = "\u05E8\u05E9\u05D5\u05DE\u05D4";
-    ExportColumns_2["COSTUMER_NUM"] = "\u05DE\u05E1.\u05DC\u05E7\u05D5\u05D7";
-    ExportColumns_2["COSTUMER_NAME"] = "\u05E9\u05DD \u05DC\u05E7\u05D5\u05D7";
-    ExportColumns_2["ORDER_DATE"] = "\u05EA\u05D0\u05E8\u05D9\u05DA \u05D4\u05D6\u05DE\u05E0\u05D4";
-    ExportColumns_2["ORDER_NUM"] = "\u05DE\u05E1.\u05D4\u05D6\u05DE\u05E0\u05D4";
-    ExportColumns_2["DETAILS"] = "\u05E4\u05E8\u05D8\u05D9\u05DD";
-    ExportColumns_2["ID"] = "\u05DE\u05E7\u05D8";
-    ExportColumns_2["DESCRIPTION"] = "\u05EA\u05D9\u05D0\u05D5\u05E8";
-    ExportColumns_2["QUANTITY"] = "\u05DB\u05DE\u05D5\u05EA";
-    ExportColumns_2["PRICE_BEFORE_TAX"] = "\u05DE\u05D7\u05D9\u05E8 \u05DC\u05E4\u05E0\u05D9 \u05DE\u05E2\u05DE";
-    ExportColumns_2["COSTUMER_CONTACT"] = "\u05D0\u05D9\u05E9 \u05E7\u05E9\u05E8";
-    ExportColumns_2["TELEPHONE_NUM"] = "\u05D8\u05DC\u05E4\u05D5\u05DF";
-    ExportColumns_2["EMAIL"] = "\u05D0\u05D9\u05DE\u05D9\u05D9\u05DC";
-    ExportColumns_2["ADDRESS1"] = "\u05DB\u05EA\u05D5\u05D1\u05EA 1";
-    ExportColumns_2["ADDRESS2"] = "\u05DB\u05EA\u05D5\u05D1\u05EA 2";
-    ExportColumns_2["ADDRESS3"] = "\u05DB\u05EA\u05D5\u05D1\u05EA 3";
-    ExportColumns_2["CITY"] = "\u05E2\u05D9\u05E8";
-    ExportColumns_2["TEXT"] = "\u05D8\u05E7\u05E1\u05D8 \u05DC\u05D4\u05D6\u05DE\u05E0\u05D4";
-    ExportColumns_2["PRIORITY_STATUS"] = "\u05E1\u05D8\u05D8\u05D5\u05E1 \u05E4\u05E8\u05D9\u05D5\u05E8\u05D9\u05D8\u05D9";
-})(ExportColumns_2 || (ExportColumns_2 = {}));
 var ImportColumns_2;
 (function (ImportColumns_2) {
     ImportColumns_2["Order_ID"] = "Order ID";
@@ -529,6 +521,29 @@ var ImportColumns_2;
     ImportColumns_2["Rivihit_Invoice"] = "Rivihit Invoice";
     ImportColumns_2["Shipping_Name"] = "Shipping Name";
 })(ImportColumns_2 || (ImportColumns_2 = {}));
+var ExportColumns;
+(function (ExportColumns) {
+    ExportColumns["TYPE"] = "\u05E8\u05E9\u05D5\u05DE\u05D4";
+    ExportColumns["COSTUMER_NUM"] = "\u05DE\u05E1.\u05DC\u05E7\u05D5\u05D7";
+    ExportColumns["COSTUMER_NAME"] = "\u05E9\u05DD \u05DC\u05E7\u05D5\u05D7";
+    ExportColumns["ORDER_DATE"] = "\u05EA\u05D0\u05E8\u05D9\u05DA \u05D4\u05D6\u05DE\u05E0\u05D4";
+    ExportColumns["ORDER_NUM"] = "\u05DE\u05E1.\u05D4\u05D6\u05DE\u05E0\u05D4";
+    ExportColumns["DETAILS"] = "\u05E4\u05E8\u05D8\u05D9\u05DD";
+    ExportColumns["ID"] = "\u05DE\u05E7\u05D8";
+    ExportColumns["DESCRIPTION"] = "\u05EA\u05D9\u05D0\u05D5\u05E8";
+    ExportColumns["QUANTITY"] = "\u05DB\u05DE\u05D5\u05EA";
+    ExportColumns["PRICE_BEFORE_TAX"] = "\u05DE\u05D7\u05D9\u05E8 \u05DC\u05E4\u05E0\u05D9 \u05DE\u05E2\u05DE";
+    ExportColumns["COSTUMER_CONTACT"] = "\u05D0\u05D9\u05E9 \u05E7\u05E9\u05E8";
+    ExportColumns["TELEPHONE_NUM"] = "\u05D8\u05DC\u05E4\u05D5\u05DF";
+    ExportColumns["EMAIL"] = "\u05D0\u05D9\u05DE\u05D9\u05D9\u05DC";
+    ExportColumns["ADDRESS1"] = "\u05DB\u05EA\u05D5\u05D1\u05EA 1";
+    ExportColumns["ADDRESS2"] = "\u05DB\u05EA\u05D5\u05D1\u05EA 2";
+    ExportColumns["ADDRESS3"] = "\u05DB\u05EA\u05D5\u05D1\u05EA 3";
+    ExportColumns["CITY"] = "\u05E2\u05D9\u05E8";
+    ExportColumns["TEXT"] = "\u05D8\u05E7\u05E1\u05D8 \u05DC\u05D4\u05D6\u05DE\u05E0\u05D4";
+    ExportColumns["INNER_TEXT"] = "\u05D8\u05E7\u05E1\u05D8 \u05E4\u05E0\u05D9\u05DE\u05D9";
+    ExportColumns["PRIORITY_STATUS"] = "\u05E1\u05D8\u05D8\u05D5\u05E1 \u05E4\u05E8\u05D9\u05D5\u05E8\u05D9\u05D8\u05D9";
+})(ExportColumns || (ExportColumns = {}));
 var RegularPC;
 (function (RegularPC) {
     RegularPC["PC1"] = "2BF-M92I58GB-KIT";

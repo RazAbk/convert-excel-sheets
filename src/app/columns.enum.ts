@@ -24,28 +24,6 @@ export enum ImportColumns_1 {
   INTERNAL_COMMENT = "הערה פנימית",
 }
 
-export enum ExportColumns_2 {
-  TYPE = "רשומה",
-  COSTUMER_NUM = "מס.לקוח",
-  COSTUMER_NAME = "שם לקוח",
-  ORDER_DATE = "תאריך הזמנה",
-  ORDER_NUM = "מס.הזמנה",
-  DETAILS = "פרטים",
-  ID = "מקט",
-  DESCRIPTION = "תיאור",
-  QUANTITY = "כמות",
-  PRICE_BEFORE_TAX = "מחיר לפני מעמ",
-  COSTUMER_CONTACT = "איש קשר",
-  TELEPHONE_NUM = "טלפון",
-  EMAIL = "אימייל",
-  ADDRESS1 = "כתובת 1",
-  ADDRESS2 = "כתובת 2",
-  ADDRESS3 = "כתובת 3",
-  CITY = "עיר",
-  TEXT = "טקסט להזמנה",
-  PRIORITY_STATUS = "סטטוס פריוריטי"
-}
-
 export enum ImportColumns_2 {
     Order_ID = "Order ID",
     Order_Date = "Order Date",
@@ -69,6 +47,29 @@ export enum ImportColumns_2 {
     Customer_Note = "Customer Note",
     Rivihit_Invoice = "Rivihit Invoice",
     Shipping_Name = "Shipping Name",
+}
+
+export enum ExportColumns {
+  TYPE = "רשומה",
+  COSTUMER_NUM = "מס.לקוח",
+  COSTUMER_NAME = "שם לקוח",
+  ORDER_DATE = "תאריך הזמנה",
+  ORDER_NUM = "מס.הזמנה",
+  DETAILS = "פרטים",
+  ID = "מקט",
+  DESCRIPTION = "תיאור",
+  QUANTITY = "כמות",
+  PRICE_BEFORE_TAX = "מחיר לפני מעמ",
+  COSTUMER_CONTACT = "איש קשר",
+  TELEPHONE_NUM = "טלפון",
+  EMAIL = "אימייל",
+  ADDRESS1 = "כתובת 1",
+  ADDRESS2 = "כתובת 2",
+  ADDRESS3 = "כתובת 3",
+  CITY = "עיר",
+  TEXT = "טקסט להזמנה",
+  INNER_TEXT = "טקסט פנימי",
+  PRIORITY_STATUS = "סטטוס פריוריטי"
 }
 
 export enum RegularPC {
