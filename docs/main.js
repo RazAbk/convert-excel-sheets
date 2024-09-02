@@ -553,7 +553,7 @@ var RegularPC;
 var LaptopPC;
 (function (LaptopPC) {
     LaptopPC["LAPTOP1"] = "2BF-HP640G3I5-7TH8240";
-    LaptopPC["LAPTOP2"] = "2BF-HP640G3I5-6TH8240";
+    LaptopPC["LAPTOP2"] = "2BF-HP640G2I5-6TH8240";
 })(LaptopPC || (LaptopPC = {}));
 
 
